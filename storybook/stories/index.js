@@ -8,7 +8,7 @@ import { linkTo } from '@storybook/addon-links';
 import Button from './Button';
 import CenterView from './CenterView';
 import Welcome from './Welcome';
-import LeftToRightRowAnimation from './LeftToRightRowAnimation';
+import TopToBottomRowAnimation from './TopToBottomRowAnimation';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -25,4 +25,5 @@ storiesOf('Button', module)
     </Button>
   ));
 
-  storiesOf('Row Animation', module).add('to Storybook', () => <LeftToRightRowAnimation />);
+  storiesOf('Row Animation', module)
+    .add('Appear from the top', () => <TopToBottomRowAnimation />);
