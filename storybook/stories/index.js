@@ -9,6 +9,7 @@ import Button from './Button';
 import CenterView from './CenterView';
 import Welcome from './Welcome';
 import TopToBottomRowAnimation from './TopToBottomRowAnimation';
+import LoginScreen from './Login/LoginScreen';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -27,3 +28,5 @@ storiesOf('Button', module)
 
   storiesOf('Row Animation', module)
     .add('Appear from the top', () => <TopToBottomRowAnimation />);
+
+  storiesOf('Login Screen', module).add('Login Screen', () => <LoginScreen />)
