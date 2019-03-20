@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Dimensions } from "react-native";
+import { View, Dimensions, Text } from "react-native";
 import { storiesOf } from "@storybook/react-native";
 import TopToBottomRowAnimation from "./TopToBottomRowAnimation";
 import LoginScreen from "./Login/LoginScreen";
@@ -7,6 +7,7 @@ import ShakyText from "./ShakyText";
 import AnimatedBar from "./AnimatedBar";
 import { seq } from "../../components/utils";
 import GrowAndDisappear from "./GrowAndDisappear";
+import Banner from "./Banner";
 
 storiesOf("Row Animation", module).add("Appear from the top", () => (
   <TopToBottomRowAnimation />
@@ -27,4 +28,21 @@ storiesOf("Simple animations", module)
         />
       ))}
     </View>
-  )).add('Grow and disappear', () => <GrowAndDisappear />);
+  ))
+  .add("Grow and disappear", () => <GrowAndDisappear />)
+  .add("Banner", () => (
+    <Banner>
+      <Text
+        style={{
+          color: "white",
+          fontWeight: "bold",
+          textAlign: "center",
+          justifyContent: "center",
+          padding: 0,
+          margin: 0
+        }}
+      >
+        Some text
+      </Text>
+    </Banner>
+  ));
