@@ -6,6 +6,7 @@ import LoginScreen from "./Login/LoginScreen";
 import ShakyText from "./ShakyText";
 import AnimatedBar from "./AnimatedBar";
 import { seq } from "../../components/utils";
+import GrowAndDisappear from "./GrowAndDisappear";
 
 storiesOf("Row Animation", module).add("Appear from the top", () => (
   <TopToBottomRowAnimation />
@@ -26,4 +27,4 @@ storiesOf("Simple animations", module)
         />
       ))}
     </View>
-  ));
+  )).add('Grow and disappear', () => <GrowAndDisappear />);
