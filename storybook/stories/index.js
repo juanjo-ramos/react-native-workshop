@@ -10,6 +10,7 @@ import CenterView from './CenterView';
 import Welcome from './Welcome';
 import TopToBottomRowAnimation from './TopToBottomRowAnimation';
 import LoginScreen from './Login/LoginScreen';
+import ShakyText from './ShakyText'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -30,3 +31,4 @@ storiesOf('Button', module)
     .add('Appear from the top', () => <TopToBottomRowAnimation />);
 
   storiesOf('Login Screen', module).add('Login Screen', () => <LoginScreen />)
+  storiesOf('Simple animations', module).add('Shake text field', () => <ShakyText error="Test" />)
