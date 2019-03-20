@@ -28,7 +28,7 @@ export default class App extends React.Component<{}, State> {
 
   componentDidMount() {
     Animated.sequence([
-      Animated.delay(600),
+      Animated.delay(1000),
       Animated.timing(this.logoOffset, {
         toValue: -220,
         duration: 600,
