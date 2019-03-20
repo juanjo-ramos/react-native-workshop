@@ -1,10 +1,10 @@
 {
-  "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 18138,
-  "expoServerNgrokUrl": "https://bq-dqy.aichamorro.rn-row-animation-slide-right.exp.direct",
-  "packagerNgrokUrl": "https://packager.bq-dqy.aichamorro.rn-row-animation-slide-right.exp.direct",
-  "ngrokPid": 18159,
+  "devToolsPort": 19003,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null
 }
