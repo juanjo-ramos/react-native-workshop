@@ -39,7 +39,8 @@ export default StyleSheet.create({
   },
   logo: {
     width: 64,
-    height: 64
+    height: 64,
+    transform: [{translateY: -220}]
   },
   errorContainer: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
