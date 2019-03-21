@@ -26,13 +26,15 @@ export default class App extends React.Component<{}, State> {
   }
 
   animate() {
+    // TODO:
     // 1. Move the logo from the center of the screen to its final position
     // 2. After the logo stops, make the login from to appear slowly on screen
     // 3. Optimize the animation by running it on the UI thread
   }
 
   toggleErrorMessage = () => {
-    // 4. Animate the transition of the errr message
+    // TODO:
+    // 4. Animate the transition of the error message
     this.setState(prev => {
       if (prev.errorMessage) {
         return { errorMessage: undefined };
@@ -45,6 +47,7 @@ export default class App extends React.Component<{}, State> {
   render() {
     const { errorMessage } = this.state;
 
+    // TODO: Note that the views below are not animatable yet.
     return (
       <ImageBackground
         style={style.backgroundImage}
