@@ -1,5 +1,5 @@
 # React Native Animation Workshop
-This projects implements an animation in React Native when items are added to a list in which they're revealed with a left-to-right animation
+This project contains all the information to implement the different animations of the React Native Workshop in BitsConf 2019.
 
 # TODO
 * Add setup instructions
