@@ -3,11 +3,9 @@ import {
   View,
   ImageBackground,
   SafeAreaView,
-  Animated,
   Text,
   TouchableOpacity,
   Image,
-  LayoutAnimation,
   StatusBar
 } from "react-native";
 import LoginTextInput from "../LoginTextInput";
@@ -23,28 +21,20 @@ export default class App extends React.Component<{}, State> {
     errorMessage: undefined
   };
 
-  logoOffset = new Animated.Value(0);
-  loginFormOpacity = new Animated.Value(0);
-
   componentDidMount() {
-    Animated.sequence([
-      Animated.delay(1000),
-      Animated.timing(this.logoOffset, {
-        toValue: -220,
-        duration: 600,
-        useNativeDriver: true
-      }),
-      Animated.timing(this.loginFormOpacity, {
-        toValue: 1,
-        duration: 600,
-        useNativeDriver: true
-      })
-    ]).start();
+    this.animate();
+  }
+
+  animate() {
+    // TODO:
+    // 1. Move the logo from the center of the screen to its final position
+    // 2. After the logo stops, make the login from to appear slowly on screen
+    // 3. Optimize the animation by running it on the UI thread
   }
 
   toggleErrorMessage = () => {
-    LayoutAnimation.easeInEaseOut();
-
+    // TODO:
+    // 4. Animate the transition of the error message
     this.setState(prev => {
       if (prev.errorMessage) {
         return { errorMessage: undefined };
@@ -57,6 +47,7 @@ export default class App extends React.Component<{}, State> {
   render() {
     const { errorMessage } = this.state;
 
+    // TODO: Note that the views below are not animatable yet.
     return (
       <ImageBackground
         style={style.backgroundImage}
@@ -64,23 +55,13 @@ export default class App extends React.Component<{}, State> {
       >
         <SafeAreaView style={[style.container]}>
           <StatusBar hidden />
-          <Animated.View
-            style={[
-              style.logoContainer,
-              { transform: [{ translateY: this.logoOffset }] }
-            ]}
-          >
+          <View style={style.logoContainer}>
             <Image
               source={require("./assets/logo-hudl-login.png")}
               style={style.logo}
             />
-          </Animated.View>
-          <Animated.View
-            style={[
-              style.loginFormContainer,
-              { opacity: this.loginFormOpacity }
-            ]}
-          >
+          </View>
+          <View style={style.loginFormContainer}>
             <LoginTextInput style={style.emailField} label="Email" />
             <LoginTextInput style={style.passwordField} label="Password" />
             {errorMessage && (
@@ -97,7 +78,7 @@ export default class App extends React.Component<{}, State> {
             <TouchableOpacity>
               <Text style={style.loginHelpLink}>Need Help Logging In?</Text>
             </TouchableOpacity>
-          </Animated.View>
+          </View>
         </SafeAreaView>
       </ImageBackground>
     );
