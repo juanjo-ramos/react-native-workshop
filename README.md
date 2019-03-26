@@ -1,8 +1,57 @@
 # React Native Animation Workshop
-This project contains all the information to implement the different animations of the React Native Workshop in BitsConf 2019.
+Welcome to the workshop! You will be implementing some animations using React Native. Before you do that, we need to get you set up.
 
-# TODO
-* Add setup instructions
-* Include videos or GIFs of the animations to be implemented
-* Include references to the documentation most relevant for this
-* Include link to the slides so the sample code is available
+We **recommend that you use a MAC** to run the workshop or pair up with someone who has a MAC.
+
+Any problems, questions or comments you may have, please Slack us: @juanjo and @alberto.chamorro.
+
+# Setup
+## Repo and Dependencies
+1. You need [yarn](https://yarnpkg.com). If you want to cehck if you have it, run `yarn --version`. If you have version 1.15 or above, you're good. If you don't, install yarn using homebrew running `brew install yarn` in your terminal window.
+If you don't have homebrew you can get it [here](https://brew.sh/).
+2. You need [watchman](https://facebook.github.io/watchman/docs/install.html). If you don't have it, install it with `brew install watchman`. If you want to check whether or not you have it type `watchman -v`. If you have version 4.9.4 or above, you don't need to do anything. If you don't, upgrade it with `brew upgrade watchman`.
+3. You need [expo](https://expo.io/). Expo allows you to build, deploy and iterate on your React Native app very quickly. Install expo globbally using `yarn globall add expo-cli`.
+Run `expo --version` on your terminal window to ensure it installed correctly. You should see something like 1.1.0 (or the version you installed).
+4. You need to clone this repo.
+4. Finally, to install all the dependencies this project requires, go to the folder where you cloned the repo and run `yarn install`.
+
+## IDE
+We recomnend [Visual Studio Code](https://code.visualstudio.com/). It's also a widely used option at Hudl.
+
+## Running the app
+Congratulations, if you've made it here you have your development environment ready :tada:. Now, you need a place to deploy the fancy animations you'll be creating.
+
+There are 2 options: Running it on the device and on the simulator. Ideally, we could all have them running on the devices. That requires your phone and computer to be on the same network. However, since we don't know the quality of network we'll have on the venue, we highly recommend that you also install one of the simulators as a fallback option in case network isn't good enough.
+
+## 1. Run it on your iOS or Android simulator.
+1. Install iOS or Android simulators, if you don't have them already:
+  1.1 For iOS, [install Xcode](https://itunes.apple.com/es/app/xcode/id497799835?l=en&mt=12).
+  1.2 For Android, [install Android Studio](https://developer.android.com/studio). This is your only viable option if you're on a Windows machine.
+2. Open 2 terminal windows.
+  2.1 In the first one, run `yarn storybook`.
+  2.2 In the second terminal window, run `yarn start`. That should open a new tab in your browser where expo would start doing it's magic.
+  2.3 In the tab thas was just opened, click on `Run on Android device / emulator` or `Run on iOS simulator` depending on what you installed in the first step.
+  INSERT IMAGE
+  2.4 After your simulator launches, you should see something like this.
+
+You're all set :).
+
+### 2. Run it on your Android or iOS device
+1. Create an account on [expo.io](https://expo.io/)
+2. Install the expo app on your phone
+  1.1 iOS -> https://itunes.apple.com/app/apple-store/id982107779
+  1.2 Android -> https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www
+3. Launch the app on your phone and log in with the credentials you created earlier
+4. Open 2 terminals.
+  4.1 In the first one, run `yarn storybook`.
+  4.2 In the second one, run `expo login` and log in with the credentials you created in the previous step.
+  4.3 After logging in, run `yarn start`. That should open a new tab in your browser where expo would start doing it's magic.
+  4.4 In the tab thas was just opened, click on `Publish or republish` project. You will be presented a brief form there. Change it or leave it as is, it doesn't affect the functionality.
+  4.5 Ensure your phone and computer are on the same network and go back to the Expo app you already installed on your phone. You should see the prooject you just published both in the `Projects` and `Profile` section. If you do not, pull down to refresh. If you still don't see it make sure you're logged in with the user you created earlier. If none of the previous work, try killing and re-opening the app. Don't take it personally. Expo is a bit stubborn sometimes.
+  4.6 Once you see the project tapping on it would open storybooks on your phone and you should see something like ADD IMAGE
+
+# Questions
+Once again, any problems, questions or comments you may have, please Slack us: @juanjo and @alberto.chamorro.
+
+# Exercises
+TODO: Create new document and link it here.
