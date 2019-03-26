@@ -7,8 +7,9 @@ Any problems, questions or comments you may have, please Slack us: @juanjo and @
 
 # Setup
 ## Repo and Dependencies
-1. You need [yarn](https://yarnpkg.com). If you want to cehck if you have it, run `yarn --version`. If you have version 1.15 or above, you're good. If you don't, install yarn using homebrew running `brew install yarn` in your terminal window.
+1. You need [yarn](https://yarnpkg.com). If you want to check if you have it, run `yarn --version`. If you have version 1.15 or above, you're good. If you don't, install yarn using homebrew running `brew install yarn` in your terminal window.
 If you don't have homebrew you can get it [here](https://brew.sh/).
+**Homebrew is a MAC only tool**, for Windows installations see the linked pages of each of the required components.
 2. You need [watchman](https://facebook.github.io/watchman/docs/install.html). If you don't have it, install it with `brew install watchman`. If you want to check whether or not you have it type `watchman -v`. If you have version 4.9.4 or above, you don't need to do anything. If you don't, upgrade it with `brew upgrade watchman`.
 3. You need [expo](https://expo.io/). Expo allows you to build, deploy and iterate on your React Native app very quickly. Install expo globbally using `yarn globall add expo-cli`.
 Run `expo --version` on your terminal window to ensure it installed correctly. You should see something like 1.1.0 (or the version you installed).
@@ -26,6 +27,7 @@ There are 2 options: Running it on the device and on the simulator. Ideally, we 
 ## Option 1: Run it on your iOS or Android simulator.
 1. Install iOS or Android simulators, if you don't have them already:
     1. For iOS, [install Xcode](https://itunes.apple.com/es/app/xcode/id497799835?l=en&mt=12).
+        a. For Xcode you'll also need the command line tools. Open Xcode and go to `Xcode -> Preferences -> Components`. If you don't see the command line tools there is because you already have them. If you see them there, click to install them.
     2. For Android, [install Android Studio](https://developer.android.com/studio). This is your only viable option if you're on a Windows machine.
 2. Open 2 terminal windows.
     1. In the first one, run `yarn storybook`.
