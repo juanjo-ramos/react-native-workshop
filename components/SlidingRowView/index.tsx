@@ -10,24 +10,32 @@ interface Props extends RowViewProps {
 const initialPosition = -200;
 
 export default class SlidingRowView extends React.PureComponent<Props> {  
-  position = new Animated.Value(initialPosition);  
+  position = new Animated.Value(initialPosition);
+  opacity = new Animated.Value(0.5);
 
   componentDidMount() {
     this.animateAddOperation();
   }
 
   animateAddOperation() {
-    Animated.timing(this.position, {
-      toValue: 0,
-      duration: 200,
-      easing: Easing.ease
-    }).start();
+    Animated.parallel([
+      Animated.timing(this.position, {
+        toValue: 0,
+        duration: 50,
+        easing: Easing.ease
+      }),
+      Animated.timing(this.opacity, {
+        toValue: 1,
+        duration: 75,
+        easing: Easing.ease
+      })
+    ]).start();
   }
 
   animateRemoveOperation(onEnd?: () => void) {
     Animated.timing(this.position, {
       toValue: initialPosition,
-      duration: 200,
+      duration: 75,
       easing: Easing.ease
     }).start(onEnd);
   }
@@ -39,6 +47,7 @@ export default class SlidingRowView extends React.PureComponent<Props> {
           this.props.style,
           {
             height: 60,
+            opacity: this.opacity,
             transform: [{ translateX: this.position }],
             zIndex: -this.props.index
           }
