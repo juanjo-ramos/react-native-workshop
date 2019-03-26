@@ -32,8 +32,8 @@ There are 2 options: Running it on the device and on the simulator. Ideally, we 
     2. In the second terminal window, run `yarn start`. That should open a new tab in your browser where expo would start doing it's magic.
     3. In the tab thas was just opened, click on `Run on Android device / emulator` or `Run on iOS simulator` depending on what you installed in the first step.
 <img width="288" alt="How expo looks like" src="https://user-images.githubusercontent.com/2914389/54987283-9b511280-4fb4-11e9-8cd9-164e08bb0eb4.png">
-    4. After your simulator launches, you should see something like this.
-  ![running expo](https://user-images.githubusercontent.com/2914389/54988086-051dec00-4fb6-11e9-8c6e-6bcb58ef06ed.gif)
+After your simulator launches, you should see something like this.
+    ![running expo](https://user-images.githubusercontent.com/2914389/54988086-051dec00-4fb6-11e9-8c6e-6bcb58ef06ed.gif)
 
 You're all set :slightly_smiling_face:.
 
