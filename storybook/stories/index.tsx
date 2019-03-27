@@ -2,6 +2,7 @@ import React from "react";
 import { View, Dimensions, Text } from "react-native";
 import { storiesOf } from "@storybook/react-native";
 import TopToBottomRowAnimation from "./TopToBottomRowAnimation";
+import LeftToRightRowAnimation from "./LeftToRightRowAnimation";
 import LoginScreen from "./Login/LoginScreen";
 import ShakyText from "./ShakyText";
 import AnimatedBar from "./AnimatedBar";
@@ -9,9 +10,13 @@ import { seq } from "../../components/utils";
 import GrowAndDisappear from "./GrowAndDisappear";
 import Banner from "./Banner";
 
-storiesOf("Row Animation", module).add("Appear from the top", () => (
-  <TopToBottomRowAnimation />
-));
+storiesOf("Row Animation", module).
+  add("Appear from the top", () => (
+    <TopToBottomRowAnimation />
+  ))
+  .add("Appear from the left", () => (
+    <LeftToRightRowAnimation />
+  ));
 
 const dimensions = Dimensions.get("window");
 

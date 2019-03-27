@@ -7,14 +7,13 @@
  * @lint-ignore-every XPLATJSCOPYRIGHT1
  */
 
-import React, { Component, RefObject, Ref } from "react";
+import React, { Component, RefObject } from "react";
 import { View, FlatList, SafeAreaView } from "react-native";
 import Button from "../../../components/Button";
-import RowView from "../../../components/AnimatableRowView";
+import RowView from "../../../components/SlidingRowView";
 import styles from "./styles";
 import {
   generateUUID,
-  generateRandomNumber,
   removeItemFromArray,
   generateRandomColor,
   seq
@@ -32,7 +31,10 @@ function generateRandomDataItem() {
 }
 
 const initalNumberOfElements = 0;
-const initialData: RowData[] = seq(initalNumberOfElements, generateRandomDataItem);
+const initialData: RowData[] = seq(
+  initalNumberOfElements,
+  generateRandomDataItem
+);
 
 interface State {
   data: RowData[];
@@ -52,7 +54,7 @@ export default class App extends Component<Props, State> {
     return (
       <RowView
         ref={this.storedRefs[index]}
-        style={{marginBottom: 1}}
+        style={{ marginBottom: 1 }}
         index={index}
         {...item}
       />
@@ -74,8 +76,7 @@ export default class App extends Component<Props, State> {
   };
 
   removeOne = () => {
-    const { data } = this.state;
-    const itemIndex = generateRandomNumber(0, data.length);
+    const itemIndex = this.state.data.length - 1;
     const { current: componentInstance } = this.getComponentForIndex(itemIndex);
 
     if (!componentInstance) {
@@ -83,7 +84,7 @@ export default class App extends Component<Props, State> {
     }
 
     componentInstance.animateRemoveOperation(() => {
-      this.setState(curr => {
+      this.setState(() => {
         const dataRemovingIndex = removeItemFromArray(
           itemIndex,
           this.state.data
