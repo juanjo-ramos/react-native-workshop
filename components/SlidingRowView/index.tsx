@@ -21,12 +21,12 @@ export default class SlidingRowView extends React.PureComponent<Props> {
     Animated.parallel([
       Animated.timing(this.position, {
         toValue: 0,
-        duration: 50,
+        duration: 75,
         easing: Easing.ease
       }),
       Animated.timing(this.opacity, {
         toValue: 1,
-        duration: 50,
+        duration: 75,
         easing: Easing.ease
       })
     ]).start();

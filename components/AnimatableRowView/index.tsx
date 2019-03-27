@@ -7,11 +7,12 @@ interface Props extends RowViewProps {
   style?: StyleProp<ViewStyle>;
 }
 
+const cellHeight = 60;
+
 export default class AnimatableRowView extends React.PureComponent<Props> {
-  // TODO: These are the initial values of your animation.
-  // You want to change them to whatever makes sense for the animation to look right
-  height = new Animated.Value(60);
-  position = new Animated.Value(0);
+  height = new Animated.Value(0);
+  scale = new Animated.Value(0);
+  position = new Animated.Value(-29);
 
   opacity = this.position.interpolate({
     inputRange: [-29, 0],
@@ -24,21 +25,26 @@ export default class AnimatableRowView extends React.PureComponent<Props> {
   }
 
   animateAddOperation() {
-    // TODO: Create the animation
-    // We want two animations running at the same time
-    // 1.1 Adjust the height to 60 animatedly
-    // 1.2 Animation should last 700ms
-    // 2.1. Adjust the Y position to a value of 0 
-    // 2.2. With an animation that should last 200ms    
+    Animated.parallel([
+      Animated.timing(this.height, {
+        toValue: cellHeight,
+        duration: 700,
+        easing: Easing.ease
+      }),
+      Animated.timing(this.position, {
+        toValue: 0,
+        duration: 200,
+        easing: Easing.ease
+      })
+    ]).start();
   }
 
   animateRemoveOperation(onEnd?: () => void) {
-    // TODO: Create the animation
-    // We want:
-    // 1. The height of the row to be 0 at the end of the animation
-    // 2. The animation to last 200ms
-    // 3. onEnd callback is called at the end of the animation
-    onEnd && onEnd();
+    Animated.timing(this.height, {
+      toValue: 0,
+      duration: 200,
+      easing: Easing.ease
+    }).start(onEnd);
   }
 
   render() {
