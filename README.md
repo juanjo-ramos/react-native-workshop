@@ -57,4 +57,6 @@ You're all set :slightly_smiling_face:.
 Once again, any problems, questions or comments you may have, please Slack us: @juanjo and @alberto.chamorro.
 
 # Exercises
-TODO: Create new document and link it here.
+For the exercises you will be implementing some animations created by our designers. These animations are either included in a Hudl mobile app or planned to be.
+
+Go to the [Exercises](./docs/Exercises.md) when you're ready.
