@@ -11,11 +11,11 @@ import GrowAndDisappear from "./GrowAndDisappear";
 import Banner from "./Banner";
 
 storiesOf("Row Animation", module).
-  add("Appear from the top", () => (
-    <TopToBottomRowAnimation />
-  ))
-  .add("Appear from the left", () => (
+  add("Appear from the left", () => (
     <LeftToRightRowAnimation />
+  ))
+  .add("Appear from the top", () => (
+    <TopToBottomRowAnimation />
   ));
 
 const dimensions = Dimensions.get("window");
