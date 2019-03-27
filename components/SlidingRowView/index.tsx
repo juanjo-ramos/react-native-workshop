@@ -26,7 +26,7 @@ export default class SlidingRowView extends React.PureComponent<Props> {
       }),
       Animated.timing(this.opacity, {
         toValue: 1,
-        duration: 75,
+        duration: 50,
         easing: Easing.ease
       })
     ]).start();
