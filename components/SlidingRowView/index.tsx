@@ -21,7 +21,7 @@ export default class SlidingRowView extends React.PureComponent<Props> {
     // We need 2 animations to run in parallel
     // 1. Translates the X component of the position to 0
     // 2. Transforms the opacity of the Animated.View from 0.5 to 1.0
-    // They both should last 50ms and should use one `easing` option
+    // They both should last 75ms and should use one `easing` option
     // Extra kudos if you use `interpolate` for the opacity one    
   }
 
