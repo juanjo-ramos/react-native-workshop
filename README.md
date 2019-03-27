@@ -10,7 +10,7 @@ Any problems, questions or comments you may have, please Slack us: @juanjo and @
 1. You need [yarn](https://yarnpkg.com). If you want to check if you have it, run `yarn --version`. If you have version 1.15 or above, you're good. If you don't, install yarn using homebrew running `brew install yarn` in your terminal window.
 If you don't have homebrew you can get it [here](https://brew.sh/).
 **Homebrew is a MAC only tool**, for Windows installations see the linked pages of each of the required components.
-2. You need [watchman](https://facebook.github.io/watchman/docs/install.html). If you don't have it, install it with `brew install watchman`. If you want to check whether or not you have it type `watchman -v`. If you have version 4.9.4 or above, you don't need to do anything. If you don't, upgrade it with `brew upgrade watchman`.
+2. You need [watchman](https://facebook.github.io/watchman/docs/install.html). If you don't have it, install it with `brew install watchman`. If you want to check whether or not you have it type `watchman -v`. We have tested version 4.9. It may work with other versions as well. If you want to upgrade to be sure, run `brew upgrade watchman`.
 3. You need [expo](https://expo.io/). Expo allows you to build, deploy and iterate on your React Native app very quickly. Install expo globally using `yarn global add expo-cli`.
 Run `expo --version` on your terminal window to ensure it installed correctly. You should see something like 1.1.0 (or the version you installed).
 4. You need to clone this repo.
@@ -34,8 +34,8 @@ There are 2 options: Running it on the device and on the simulator. Ideally, we 
     2. In the second terminal window, run `yarn start`. That should open a new tab in your browser where expo would start doing it's magic.
     3. In the tab that was just opened, click on `Run on Android device / emulator` or `Run on iOS simulator` depending on what you installed in the first step.
 <img width="288" alt="How expo looks like" src="https://user-images.githubusercontent.com/2914389/54987283-9b511280-4fb4-11e9-8cd9-164e08bb0eb4.png">
-After your simulator launches, you should see something like this.
-    ![running expo](https://user-images.githubusercontent.com/2914389/54988086-051dec00-4fb6-11e9-8c6e-6bcb58ef06ed.gif)
+That will launch the simulator and prompt you to install the Expo app there. After expo is installed you'll see a Home page screen. Click on `Got It` and you should see something like this.
+![running expo](https://user-images.githubusercontent.com/2914389/54988086-051dec00-4fb6-11e9-8c6e-6bcb58ef06ed.gif)
 
 You're all set :slightly_smiling_face:.
 
