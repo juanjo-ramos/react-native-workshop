@@ -22,7 +22,7 @@ In this exercise, we are re-creating [Hudl's Login screen (iOS version)](https:/
 
 <div style="text-align: center"><img src="https://user-images.githubusercontent.com/6965651/55230257-8af0a000-521f-11e9-8090-2c1b17ef76ad.gif" /></div>
 
-As you can see, the logo stays in the middle of the screen while the app loads. Then, it moves to the top and the login form fades in. Even more, when [there is an error](![Hudl-Login](https://user-images.githubusercontent.com/6965651/55230257-8af0a000-521f-11e9-8090-2c1b17ef76ad.gif)):
+As you can see, the logo stays in the middle of the screen while the app loads. Then, it moves to the top and the login form fades in. Besides, a message appears over the Login button when [there is an error](https://drive.google.com/file/d/1Kv0AZhDsAa5Ff1XinygcBt4dpzp4xhAv/view?usp=sharing):
 
 <div style="text-align: center"><img src="https://user-images.githubusercontent.com/6965651/55231122-fdfb1600-5221-11e9-9e30-e723c792d66f.gif" /></div>
 
