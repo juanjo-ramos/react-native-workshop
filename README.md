@@ -28,7 +28,7 @@ There are 2 options: Running it on the device and on the simulator. Ideally, we 
 1. Install iOS or Android simulators, if you don't have them already:
     1. For iOS, [install Xcode](https://itunes.apple.com/es/app/xcode/id497799835?l=en&mt=12).
         a. For Xcode you'll also need the command line tools. Open Xcode and go to `Xcode -> Preferences -> Components`. If you don't see the command line tools there is because you already have them. If you see them there, click to install them.
-    2. For Android, [install Android Studio](https://developer.android.com/studio). This is your only viable option if you're on a Windows machine.
+    2. For Android, [install Android Studio](https://developer.android.com/studio). This is your only viable option if you're on a Windows machine. See below [Android Studio post installation steps](#android-studio-post-installation-steps).
 2. Open 2 terminal windows.
     1. In the first one, run `yarn storybook`.
     2. In the second terminal window, run `yarn start`. That should open a new tab in your browser where expo would start doing it's magic.
@@ -39,7 +39,7 @@ That will launch the simulator and prompt you to install the Expo app there. Aft
 
 You're all set :slightly_smiling_face:.
 
-### Option 2: Run it on your Android or iOS device
+## Option 2: Run it on your Android or iOS device
 1. Create an account on [expo.io](https://expo.io/)
 2. Install the expo app on your phone
     1. iOS -> https://itunes.apple.com/app/apple-store/id982107779
@@ -52,6 +52,13 @@ You're all set :slightly_smiling_face:.
     4. In the tab that was just opened, click on `Publish or republish` project. You will be presented a brief form there. Change it or leave it as is, it doesn't affect the functionality.
     5. Ensure your phone and computer are on the same network and go back to the Expo app you already installed on your phone. You should see the project you just published both in the `Projects` and `Profile` section. If you do not, pull down to refresh. If you still don't see it make sure you're logged in with the user you created earlier. If none of the previous work, try killing and re-opening the app. Don't take it personally. Expo is a bit stubborn sometimes.
     6. Once you see the project tapping on it would open storybooks on your phone.
+    
+## Android Studio post installation steps
+If you want to use an Android emulator, you would need to install it separately after Android Studio has finished. Please follow [these instructions](https://docs.expo.io/versions/latest/workflow/android-studio-emulator/) to install one.
+### Caveats
+1. For `Step 2: Set up a virtual device`, you would need to create a new empty project. It doesn't matter what project type you use. Pick the default one.
+2. I tested installing `Pixel 2` as virtual device and `Q` as system images. Others configuration should work too but if you want to be on the safe side, pick that.
+3. After completing all the steps in the link, make sure you run the empty prokect you created in 1. in the installed virtual device. That may install some required dependencies in case you don't have them.
 
 # Questions
 Once again, any problems, questions or comments you may have, please Slack us: @juanjo and @alberto.chamorro.
