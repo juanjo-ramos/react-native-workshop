@@ -20,7 +20,7 @@ export default function(props: Props) {
   return (
     <View style={externalStyle}>
       <Text style={style.label}>{label}</Text>
-      <TextInput {...props} style={style.textInput} />
+      <TextInput {...props} style={style.textInput} editable={false} />
     </View>
   );
 }
