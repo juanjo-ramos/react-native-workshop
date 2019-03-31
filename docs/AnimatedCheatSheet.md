@@ -122,5 +122,6 @@ export default class AnimatedBar extends Component<Props, State> {
 
 # Reference
 * [Animated Reference](https://facebook.github.io/react-native/docs/animated)
+* [LayoutAnimation Reference](https://facebook.github.io/react-native/docs/layoutanimation)
 * [React Native Animations](https://facebook.github.io/react-native/docs/animations)
 * [React Native Training - React Native Animations using the Animated API](https://medium.com/react-native-training/react-native-animations-using-the-animated-api-ebe8e0669fae)
