@@ -1,7 +1,7 @@
 # Exercises
 You will be implementing different animations based on the content presented.
 
-We recommend you have the documentation of [Animated](https://facebook.github.io/react-native/docs/animated) and [LayoutAnimation](https://facebook.github.io/react-native/docs/layoutanimation) at hand.
+We have prepared a [cheat sheet](./docs/AnimatedCheatSheet.md) with everything you'd need.
 
 ## Exercise one: Animate adding and removing cells to / from a list
 Hint: You only need to use Animated to implement this animation.
