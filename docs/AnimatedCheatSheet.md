@@ -73,8 +73,8 @@ There are existing presets for different effects:
     // this.opacity but mapping the opacity values to the range
     // of [0, 360]
     const rotation = this.opacity.interpolate({
-        inputValues: [0, 1],
-        outputValues: [0, 360],
+        inputRange: [0, 1],
+        outputRange: [0, 360],
     })
   ```
 

@@ -61,6 +61,9 @@ If you want to use an Android emulator, you would need to install it separately 
 2. I tested installing `Pixel 2` as virtual device and `Q` as system images. Others configuration should work too but if you want to be on the safe side, pick that.
 3. After completing all the steps in the link, make sure you run the empty project you created in 1. in the installed virtual device. That may install some required dependencies in case you don't have them.
 
+# Slides
+These are the [slides](https://docs.google.com/presentation/d/1FFT9kCgDOybRrIoM3MwnTDirNir2o5s12U399UTZ-rU/edit?usp=sharing) presented at the beginning of the workshop.
+
 # Questions
 Once again, any problems, questions or comments you may have, please Slack us: @juanjo and @alberto.chamorro.
 
